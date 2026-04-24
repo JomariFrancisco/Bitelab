@@ -258,8 +258,9 @@
 
 .product__tagline {
   font-size: 15.5px;
-  color: var(--muted);
+  color: #4c7c1c;
   line-height: 1.5;
+  font-weight: 400;
   max-width: 300px;
 }
 

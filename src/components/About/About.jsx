@@ -41,9 +41,7 @@ export default function About() {
         <div className="about__grid">
           {ABOUT_HIGHLIGHTS.map((item, i) => (
             <div className="about__card" key={item.id} data-reveal data-delay={String(i + 1)}>
-              <div className="about__card-icon" aria-hidden="true">
-                {item.icon}
-              </div>
+              
               <h3 className="about__card-title">{item.title}</h3>
               <p className="about__card-desc">{item.description}</p>
             </div>
@@ -55,7 +53,7 @@ export default function About() {
           {[
             { value: '4', unit: '', label: 'Natural main ingredients' },
             { value: '0', unit: '', label: 'Artificial additives' },
-            { value: '3', unit: 'x', label: 'Seed paper variants' },
+            { value: '3', unit: '', label: 'Seed paper variants' },
             { value: '5', unit: '', label: 'Team members, one mission' },
           ].map((stat) => (
             <div className="about__stat" key={stat.label}>
