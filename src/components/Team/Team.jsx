@@ -72,12 +72,14 @@ function TeamPhoto({ member }) {
 export default function Team() {
   return (
     <section className="team" id="team">
-      <div className="container">
+      <div className="container team__container">
         <div className="team__header" data-reveal>
           <span className="section-label">Our Team</span>
+
           <h2 className="team__headline">
             The people behind <em>every bite.</em>
           </h2>
+
           <p className="team__subline">
             A small, driven group of students who believe that better food starts with
             better thinking. We combine food science, design, and pure stubbornness to build
@@ -87,7 +89,12 @@ export default function Team() {
 
         <div className="team__grid">
           {TEAM.map((member, i) => (
-            <article className="team-card" key={member.id} data-reveal="scale" data-delay={String((i % 5) + 1)}>
+            <article
+              className="team-card"
+              key={member.id}
+              data-reveal="scale"
+              data-delay={String((i % 5) + 1)}
+            >
               <div className="team-card__photo-wrap">
                 <TeamPhoto member={member} />
                 <div className="team-card__photo-overlay" aria-hidden="true" />
