@@ -80,7 +80,7 @@
 
 .hero__headline {
   font-family: var(--font-display);
-  font-size: 5.2rem;
+  font-size: clamp(2.2rem, 9vw, 5.2rem);
   font-weight: 600;
   line-height: 1.08;
   letter-spacing: -0.03em;
@@ -198,7 +198,6 @@
     background-position: center center;
   }
   .hero__overlay {
-    /* On tablet/mobile: overlay the whole image more uniformly */
     background: rgba(20, 44, 10, 0.78);
   }
   .hero__inner {
@@ -207,10 +206,22 @@
     padding-top: 90px;
     padding-bottom: 90px;
     text-align: center;
+    transform: none;
   }
+  .hero__copy            { margin-left: 0; }
   .hero__visual-spacer   { display: none; }
   .hero__subline         { max-width: 100%; }
   .hero__cta-group       { justify-content: center; }
   .hero__social-proof    { justify-content: center; }
   .hero__scroll          { display: none; }
+}
+
+@media (max-width: 480px) {
+  .hero__inner {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+  .hero__eyebrow         { justify-content: center; flex-wrap: wrap; }
+  .hero__btn             { font-size: 15px; padding: 13px 24px; }
+  .hero__proof-text      { font-size: 14px; }
 }

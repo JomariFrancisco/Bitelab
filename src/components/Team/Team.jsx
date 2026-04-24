@@ -81,9 +81,7 @@ export default function Team() {
           </h2>
 
           <p className="team__subline">
-            A small, driven group of students who believe that better food starts with
-            better thinking. We combine food science, design, and pure stubbornness to build
-            something worth sharing.
+            One mission — building better food from the ground up.
           </p>
         </div>
 

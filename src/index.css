@@ -134,6 +134,13 @@ ul      { list-style: none; }
   }
 }
 
+@media (max-width: 480px) {
+  :root {
+    --section-pad:   64px 0;
+    --container-pad: 0 16px;
+  }
+}
+
 /* ─── Scroll Reveal ──────────────────────────────────────────────────────────── */
 [data-reveal] {
   opacity: 0;

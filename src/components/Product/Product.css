@@ -22,7 +22,7 @@
 
 .product__headline {
   font-family: var(--font-display);
-  font-size: 3.6rem;
+  font-size: clamp(1.85rem, 6vw, 3.6rem);
   font-weight: 600;
   letter-spacing: -0.025em;
   color: var(--charcoal);
@@ -257,7 +257,7 @@
 }
 
 .product__tagline {
-  font-size: 19.5px;
+  font-size: clamp(15px, 2.2vw, 19.5px);
   color: #4c7c1c;
   line-height: 1.5;
   font-weight: 400;
@@ -271,7 +271,7 @@
 
 .product__price {
   display: block;
-  font-size: 34px;
+  font-size: clamp(24px, 4vw, 34px);
   font-weight: 700;
   color: var(--charcoal);
   letter-spacing: -0.03em;
@@ -815,6 +815,22 @@
 
   .product__ingredient-hoverbox {
     width: 150px;
+  }
+}
+
+@media (max-width: 640px) {
+  .product__tab-intro,
+  .product__overview-text,
+  .product__overview-desc,
+  .product__benefits-list li,
+  .product__benefits-list--large li,
+  .product__process-list li,
+  .product__ingredient-name,
+  .product__ingredient-note,
+  .product__allergen,
+  .product__mission-note,
+  .product__seed-chip {
+    font-size: 16px;
   }
 }
 

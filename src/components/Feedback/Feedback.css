@@ -15,21 +15,23 @@
 /* Header */
 .feedback__header {
   margin-bottom: 48px;
-  max-width: 560px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .feedback__headline {
   font-family: var(--font-display);
-  font-size: 3.6rem;
+  font-size: min(3.6rem, 5.8vw);
   font-weight: 600;
   letter-spacing: -0.025em;
   color: var(--charcoal);
   margin-bottom: 12px;
   line-height: 1.12;
+  white-space: nowrap;
+  overflow: hidden;
   text-shadow:
     0 2px 10px rgba(255, 253, 248, 0.72),
     0 8px 26px rgba(247, 235, 216, 0.52);
-    white-space: nowrap;
 }
 
 .feedback__headline em {
@@ -38,10 +40,13 @@
 }
 
 .feedback__subline {
-  font-size: 20px;
+  font-size: min(20px, 3.2vw);
   color: #4f5346;
   line-height: 1.75;
   font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-shadow: 0 1px 8px rgba(255, 253, 248, 0.7);
 }
 
@@ -91,7 +96,7 @@
 }
 
 .feedback__summary-avg {
-  font-size: 60px;
+  font-size: clamp(36px, 6vw, 60px);
   font-weight: 800;
   color: var(--charcoal);
   letter-spacing: -0.04em;
@@ -674,34 +679,57 @@
 }
 
 @media (max-width: 640px) {
+  .feedback__header {
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+
   .feedback__summary {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
     padding: 24px 22px;
     border-radius: 22px;
+    margin-bottom: 36px;
   }
 
   .feedback__summary-divider {
     display: none;
   }
 
+  .feedback__summary-note {
+    font-size: 15px;
+  }
+
   .feedback-card {
-    padding: 24px 22px;
-    border-radius: 20px;
+    padding: 20px 18px;
+    border-radius: 18px;
+  }
+
+  .feedback-card__name,
+  .feedback-card__comment {
+    font-size: 15px;
   }
 
   .feedback__form-card {
-    padding: 26px 22px;
-    border-radius: 22px;
+    padding: 24px 18px;
+    border-radius: 20px;
+  }
+
+  .feedback__form-title {
+    font-size: 17px;
   }
 
   .feedback__locked {
-    padding: 24px 20px;
+    padding: 22px 18px;
   }
 
   .feedback__locked-title {
     font-size: 20px;
+  }
+
+  .feedback__locked-text {
+    font-size: 15px;
   }
 
   .feedback__locked-features {
@@ -710,5 +738,11 @@
 
   .feedback__login-btn {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback__form-card {
+    max-width: 100%;
   }
 }

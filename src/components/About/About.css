@@ -39,14 +39,14 @@
 
 .about__headline {
   font-family: var(--font-display);
-  font-size: 3.6rem;
+  font-size: clamp(1.85rem, 6vw, 3.6rem);
   font-weight: 600;
   color: var(--charcoal);
   margin-bottom: 20px;
 }
 
 .about__intro {
-  font-size: 21px;
+  font-size: clamp(16px, 2.4vw, 21px);
   color: #2f3327;
   line-height: 1.8;
 }
@@ -228,18 +228,18 @@
 }
 
 .about__stat-value {
-  font-size: 52px;
+  font-size: clamp(32px, 6vw, 52px);
   font-weight: 700;
   color: var(--charcoal);
 }
 
 .about__stat-unit {
-  font-size: 30px;
+  font-size: clamp(20px, 4vw, 30px);
   color: #f2a541;
 }
 
 .about__stat-label {
-  font-size: 17px;
+  font-size: clamp(13px, 2vw, 17px);
   color: #555947;
   font-weight: 600;
 }
@@ -266,5 +266,40 @@
 @media (max-width: 640px) {
   .about__grid {
     grid-template-columns: 1fr;
+  }
+
+  .about__vm-block {
+    padding: 28px 24px;
+  }
+
+  .about__card {
+    padding: 24px 20px;
+  }
+
+  .about__card-desc {
+    font-size: 16px;
+  }
+
+  .about__vm-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about__stat {
+    padding: 24px 16px;
+  }
+
+  .about__header {
+    margin-bottom: 40px;
+  }
+
+  .about__vm-grid,
+  .about__grid {
+    margin-bottom: 48px;
   }
 }

@@ -21,19 +21,21 @@
 }
 
 .team__header {
-  max-width: 640px;
+  max-width: 100%;
   margin-bottom: 64px;
+  overflow: hidden;
 }
 
 .team__headline {
   font-family: var(--font-display);
-  font-size: 3.6rem;
+  font-size: min(3.6rem, 5.8vw);
   font-weight: 600;
   letter-spacing: -0.025em;
   color: var(--charcoal);
   margin-bottom: 16px;
   line-height: 1.12;
   white-space: nowrap;
+  overflow: hidden;
 
   text-shadow:
     0 2px 10px rgba(255, 253, 248, 0.86),
@@ -50,11 +52,11 @@
 }
 
 .team__subline {
-  font-size: 20px;
+  font-size: clamp(15px, 1.8vw, 18px);
   color: #34382d;
   line-height: 1.8;
-  max-width: 560px;
-  font-weight: 600;
+  max-width: 680px;
+  font-weight: 500;
 
   text-shadow:
     0 1px 8px rgba(255, 253, 248, 0.88),
@@ -290,12 +292,12 @@
   }
 
   .team__grid {
-    grid-template-columns: repeat(2, minmax(210px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
   }
 
-  .team__subline {
-    font-size: 15.5px;
+  .team__header {
+    margin-bottom: 40px;
   }
 
   .team-card__name {
@@ -305,27 +307,27 @@
 
 @media (max-width: 520px) {
   .team .team__container {
-    width: min(100% - 32px, 380px);
+    width: min(100% - 32px, 420px);
   }
 
   .team__grid {
-    grid-template-columns: 1fr;
-    max-width: 360px;
-    margin-left: auto;
-    margin-right: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 100%;
   }
 
   .team-card__name {
-    font-size: 15.5px;
-    white-space: nowrap;
+    font-size: 14px;
+    white-space: normal;
+    word-break: break-word;
   }
 
   .team-card__role {
-    font-size: 11.8px;
+    font-size: 10px;
   }
 
   .team-card__desc {
-    font-size: 13.5px;
+    font-size: 13px;
   }
 
   .team__note {
@@ -335,5 +337,14 @@
   .team__note-text {
     white-space: normal;
     text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .team__grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
