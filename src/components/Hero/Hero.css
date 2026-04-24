@@ -41,8 +41,8 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 40px;
-  padding-top: 64px;
-  padding-bottom: 100px;
+  padding-top: 80px;
+  padding-bottom: 130px;
   position: relative;
   z-index: 2;
 }
@@ -54,12 +54,12 @@
 /* ─── Copy ─────────────────────────────────────────────────────────────────── */
 .hero__eyebrow {
   display: flex;
-  gap: 8px;
-  margin-bottom: 28px;
+  gap: 10px;
+  margin-bottom: 36px;
 }
 
 .hero__badge {
-  font-size: 11.5px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.06em;
   padding: 5px 12px;
@@ -77,12 +77,12 @@
 
 .hero__headline {
   font-family: var(--font-display);
-  font-size: clamp(44px, 5.5vw, 72px);
+  font-size: clamp(48px, 6vw, 82px);
   font-weight: 400;
   line-height: 1.08;
   letter-spacing: -0.03em;
   color: #ffffff;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
 }
 .hero__headline em {
@@ -91,11 +91,11 @@
 }
 
 .hero__subline {
-  font-size: clamp(15px, 1.6vw, 18px);
+  font-size: clamp(17px, 1.8vw, 21px);
   color: rgba(255, 255, 255, 0.78);
   line-height: 1.7;
-  max-width: 440px;
-  margin-bottom: 40px;
+  max-width: 540px;
+  margin-bottom: 48px;
 }
 
 /* CTA buttons */
@@ -107,9 +107,9 @@
 }
 
 .hero__btn {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
-  padding: 14px 28px;
+  padding: 15px 32px;
   border-radius: 10px;
   letter-spacing: -0.01em;
   transition: all 0.25s var(--ease);
@@ -142,12 +142,12 @@
   gap: 10px;
 }
 .hero__stars {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--star);
   letter-spacing: 1px;
 }
 .hero__proof-text {
-  font-size: 13px;
+  font-size: 14.5px;
   color: rgba(255, 255, 255, 0.55);
 }
 
@@ -200,8 +200,8 @@
   .hero__inner {
     grid-template-columns: 1fr;
     gap: 0;
-    padding-top: 48px;
-    padding-bottom: 80px;
+    padding-top: 60px;
+    padding-bottom: 100px;
     text-align: center;
   }
   .hero__visual-spacer   { display: none; }

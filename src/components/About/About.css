@@ -39,14 +39,14 @@
 
 .about__headline {
   font-family: var(--font-display);
-  font-size: 3.2rem;
+  font-size: 3.6rem;
   font-weight: 600;
   color: var(--charcoal);
   margin-bottom: 20px;
 }
 
 .about__intro {
-  font-size: 17px;
+  font-size: 19px;
   color: #2f3327;
   line-height: 1.8;
 }
@@ -108,7 +108,7 @@
   display: inline-flex;
   align-items: center;
 
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -135,9 +135,9 @@
 
 /* ─── Text Visibility Fix ───────────────────────────────────────────────── */
 .about__vm-text {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.8;
-  color: #f7ebd8;
+  color: #2f3327;
 
   text-shadow:
     0 1px 2px rgba(0,0,0,0.25),
@@ -198,14 +198,14 @@
 }
 
 .about__card-title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 800;
   color: var(--charcoal);
   margin-bottom: 10px;
 }
 
 .about__card-desc {
-  font-size: 14.8px;
+  font-size: 16.5px;
   color: #4f5346;
   line-height: 1.7;
 }
@@ -237,18 +237,18 @@
 }
 
 .about__stat-value {
-  font-size: 44px;
+  font-size: 52px;
   font-weight: 700;
   color: var(--charcoal);
 }
 
 .about__stat-unit {
-  font-size: 26px;
+  font-size: 30px;
   color: #f2a541;
 }
 
 .about__stat-label {
-  font-size: 13px;
+  font-size: 15px;
   color: #555947;
   font-weight: 600;
 }
