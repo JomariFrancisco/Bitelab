@@ -41,17 +41,14 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 40px;
-  padding-top: 130px;
+  padding-top: 60px;
   padding-bottom: 130px;
   position: relative;
   z-index: 2;
 
-  transform: translateX(-65px); /* 👈 move left */
+  transform: translateX(-15px); /* 👈 move left */
 }
 
-.hero__visual-spacer {
-  /* Empty — the background image fills this area visually */
-}
 
 /* ─── Copy ─────────────────────────────────────────────────────────────────── */
 .hero__copy {
@@ -83,7 +80,7 @@
 
 .hero__headline {
   font-family: var(--font-display);
-  font-size: clamp(48px, 6vw, 82px);
+  font-size: 5.2rem;
   font-weight: 600;
   line-height: 1.08;
   letter-spacing: -0.03em;
