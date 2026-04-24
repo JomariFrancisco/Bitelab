@@ -20,8 +20,8 @@
 
 .feedback__headline {
   font-family: var(--font-display);
-  font-size: clamp(30px, 3.8vw, 48px);
-  font-weight: 500;
+  font-size: 3.6rem;
+  font-weight: 600;
   letter-spacing: -0.025em;
   color: var(--charcoal);
   margin-bottom: 12px;
@@ -29,6 +29,7 @@
   text-shadow:
     0 2px 10px rgba(255, 253, 248, 0.72),
     0 8px 26px rgba(247, 235, 216, 0.52);
+    white-space: nowrap;
 }
 
 .feedback__headline em {
