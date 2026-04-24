@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import './App.css';
 
 import Navbar        from './components/Navbar/Navbar.jsx';
@@ -10,12 +10,14 @@ import Feedback      from './components/Feedback/Feedback.jsx';
 import Team          from './components/Team/Team.jsx';
 import Footer        from './components/Footer/Footer.jsx';
 import AuthModal     from './components/AuthModal/AuthModal.jsx';
+import Toast         from './components/Toast/Toast.jsx';
 
 import { getSession, clearSession } from './utils/storage.js';
 
 export default function App() {
   const [user, setUser]           = useState(null);
   const [authMode, setAuthMode]   = useState(null); // 'login' | 'signup' | null
+  const [toast, setToast]         = useState({ message: '', visible: false });
 
   // Restore session on mount
   useEffect(() => {
@@ -39,14 +41,30 @@ export default function App() {
     return () => obs.disconnect();
   }, []);
 
+  const showToast = useCallback((message) => {
+    setToast({ message, visible: true });
+  }, []);
+
+  const dismissToast = useCallback(() => {
+    setToast((t) => ({ ...t, visible: false }));
+  }, []);
+
   function handleLogin(session) {
     setUser(session);
     setAuthMode(null);
+    showToast(`Welcome back, ${session.displayName}!`);
+  }
+
+  function handleSignup(session) {
+    setUser(session);
+    setAuthMode(null);
+    showToast(`Account created! Welcome, ${session.displayName}!`);
   }
 
   function handleLogout() {
     clearSession();
     setUser(null);
+    showToast("You've been signed out.");
   }
 
   function openLogin()  { setAuthMode('login');  }
@@ -82,10 +100,17 @@ export default function App() {
             mode={authMode}
             onClose={closeAuth}
             onLogin={handleLogin}
+            onSignup={handleSignup}
             onSwitchMode={(m) => setAuthMode(m)}
           />
         </>
       )}
+
+      <Toast
+        message={toast.message}
+        visible={toast.visible}
+        onDismiss={dismissToast}
+      />
     </>
   );
 }

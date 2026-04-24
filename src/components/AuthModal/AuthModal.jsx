@@ -259,7 +259,7 @@ function SignupForm({ onSuccess, onSwitch }) {
 }
 
 /* ─── Modal shell ─────────────────────────────────────────────────────────────── */
-export default function AuthModal({ mode, onClose, onLogin, onSwitchMode }) {
+export default function AuthModal({ mode, onClose, onLogin, onSignup, onSwitchMode }) {
   const modalRef = useRef(null);
   const isLogin = mode === 'login';
 
@@ -354,7 +354,7 @@ export default function AuthModal({ mode, onClose, onLogin, onSwitchMode }) {
             />
           ) : (
             <SignupForm
-              onSuccess={onLogin}
+              onSuccess={onSignup}
               onSwitch={() => onSwitchMode('login')}
             />
           )}
