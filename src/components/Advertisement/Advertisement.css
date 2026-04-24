@@ -182,10 +182,12 @@
   .advert__perk {
     width: 100%;
     box-sizing: border-box;
+    justify-content: center;
   }
 
   .advert__perk-label {
     font-size: 13.8px;
+    text-align: center;
   }
 
   .advert__footer-strip {
@@ -209,6 +211,7 @@
   .advert__perks {
     grid-template-columns: 1fr;
     width: 100%;
+
   }
 
   .advert__image-col {

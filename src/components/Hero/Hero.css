@@ -195,7 +195,7 @@
 /* ─── Responsive ─────────────────────────────────────────────────────────────── */
 @media (max-width: 960px) {
   .hero__bg {
-    background-position: center center;
+    background-position: 75% center;
   }
   .hero__overlay {
     background: rgba(20, 44, 10, 0.78);
