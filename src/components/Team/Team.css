@@ -50,7 +50,7 @@
 }
 
 .team__subline {
-  font-size: 18px;
+  font-size: 20px;
   color: #34382d;
   line-height: 1.8;
   max-width: 560px;
@@ -243,7 +243,7 @@
 }
 
 .team-card__desc {
-  font-size: 13.8px;
+  font-size: 15.5px;
   color: #34382d;
   line-height: 1.72;
   font-weight: 600;

@@ -37,7 +37,7 @@
 }
 
 .feedback__subline {
-  font-size: 18px;
+  font-size: 20px;
   color: #4f5346;
   line-height: 1.75;
   font-weight: 500;
@@ -112,7 +112,7 @@
 }
 
 .feedback__summary-note {
-  font-size: 16px;
+  font-size: 18px;
   color: #4f5346;
   line-height: 1.7;
   font-weight: 500;
@@ -248,7 +248,7 @@
 }
 
 .feedback-card__name {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 800;
   color: var(--charcoal);
 }
@@ -264,7 +264,7 @@
 }
 
 .feedback-card__comment {
-  font-size: 17px;
+  font-size: 19px;
   color: #303327;
   line-height: 1.75;
   font-weight: 500;
@@ -401,7 +401,7 @@
 }
 
 .feedback__locked-text {
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.75;
   color: #4f5346;
   font-weight: 500;

@@ -41,10 +41,12 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 40px;
-  padding-top: 80px;
+  padding-top: 130px;
   padding-bottom: 130px;
   position: relative;
   z-index: 2;
+
+  transform: translateX(-65px); /* 👈 move left */
 }
 
 .hero__visual-spacer {
@@ -52,6 +54,10 @@
 }
 
 /* ─── Copy ─────────────────────────────────────────────────────────────────── */
+.hero__copy {
+  margin-left: -80px;
+}
+
 .hero__eyebrow {
   display: flex;
   gap: 10px;
@@ -91,7 +97,7 @@
 }
 
 .hero__subline {
-  font-size: clamp(17px, 1.8vw, 21px);
+  font-size: clamp(19px, 1.8vw, 23px);
   color: rgba(255, 255, 255, 0.78);
   line-height: 1.7;
   max-width: 540px;
@@ -147,7 +153,7 @@
   letter-spacing: 1px;
 }
 .hero__proof-text {
-  font-size: 14.5px;
+  font-size: 16.5px;
   color: rgba(255, 255, 255, 0.55);
 }
 
@@ -200,8 +206,8 @@
   .hero__inner {
     grid-template-columns: 1fr;
     gap: 0;
-    padding-top: 60px;
-    padding-bottom: 100px;
+    padding-top: 90px;
+    padding-bottom: 90px;
     text-align: center;
   }
   .hero__visual-spacer   { display: none; }

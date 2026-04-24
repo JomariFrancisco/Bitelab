@@ -257,7 +257,7 @@
 }
 
 .product__tagline {
-  font-size: 17.5px;
+  font-size: 19.5px;
   color: #4c7c1c;
   line-height: 1.5;
   font-weight: 400;
@@ -367,7 +367,7 @@
 }
 
 .product__tab-intro {
-  font-size: 17.5px;
+  font-size: 19.5px;
   color: var(--charcoal);
   margin-bottom: 22px;
   line-height: 1.65;
@@ -409,7 +409,7 @@
 }
 
 .product__overview-text {
-  font-size: 17.5px;
+  font-size: 19.5px;
   color: var(--charcoal);
   line-height: 1.75;
   margin-bottom: 16px;
@@ -417,7 +417,7 @@
 }
 
 .product__overview-desc {
-  font-size: 17.5px;
+  font-size: 19.5px;
   color: var(--black);
   line-height: 1.75;
   margin-bottom: 24px;
@@ -456,7 +456,7 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 17px;
+  font-size: 19px;
   color: var(--charcoal);
   line-height: 1.65;
   font-weight: 500;
@@ -497,7 +497,7 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-size: 17px;
+  font-size: 19px;
   color: var(--charcoal);
   line-height: 1.65;
   font-weight: 500;
@@ -561,14 +561,14 @@
 }
 
 .product__ingredient-name {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 700;
   color: var(--accent);
   letter-spacing: -0.01em;
 }
 
 .product__ingredient-note {
-  font-size: 17px;
+  font-size: 19px;
   color: var(--muted);
   line-height: 1.65;
   font-weight: 500;
@@ -626,7 +626,7 @@
 }
 
 .product__allergen {
-  font-size: 17px;
+  font-size: 19px;
   color: var(--charcoal);
   line-height: 1.65;
   padding: 16px 18px;
@@ -653,7 +653,7 @@
 }
 
 .product__seed-chip {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 700;
   padding: 8px 16px;
   border-radius: 100px;
@@ -678,7 +678,7 @@
 }
 
 .product__benefits-list--large li {
-  font-size: 17px;
+  font-size: 19px;
   gap: 12px;
   color: var(--charcoal);
   font-weight: 500;
@@ -697,7 +697,7 @@
   border: 1px solid rgba(196, 121, 58, 0.22);
   border-left: 4px solid var(--accent);
   border-radius: 0 18px 18px 0;
-  font-size: 17px;
+  font-size: 19px;
   color: var(--charcoal);
   line-height: 1.7;
   font-weight: 500;
