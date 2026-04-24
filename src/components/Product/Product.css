@@ -177,11 +177,11 @@
 
 /* Variants */
 .product__variants-label {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--muted-light);
+  color: #4C7C1C;
   margin-bottom: 10px;
 }
 
@@ -329,18 +329,53 @@
 }
 
 /* Overview */
+.product__overview-container {
+  position: relative;
+  padding: 24px;
+  border-radius: 24px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 253, 248, 0.88) 0%,
+      rgba(247, 235, 216, 0.56) 100%
+    );
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  box-shadow:
+    0 18px 42px rgba(44, 35, 18, 0.09),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+}
+
+.product__overview-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(242, 165, 65, 0.18), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(126, 135, 65, 0.12), transparent 36%);
+  pointer-events: none;
+}
+
+.product__overview-container > * {
+  position: relative;
+  z-index: 1;
+}
+
 .product__overview-text {
   font-size: 16px;
   color: var(--charcoal);
   line-height: 1.75;
   margin-bottom: 16px;
+  font-weight: 500;
 }
 
 .product__overview-desc {
-  font-size: 15px;
-  color: var(--muted);
+  font-size: 16px;
+  color: var(--black);
   line-height: 1.75;
   margin-bottom: 24px;
+  font-weight: 500;
 }
 
 .product__overview-panels {
@@ -360,7 +395,7 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--muted-light);
+  color: #4C7C1C;
   margin-bottom: 12px;
 }
 
@@ -368,6 +403,7 @@
   display: flex;
   flex-direction: column;
   gap: 9px;
+  font-weight: 500;
 }
 
 .product__benefits-list li {
@@ -377,6 +413,7 @@
   font-size: 15px;
   color: var(--charcoal);
   line-height: 1.5;
+  font-weight: 500;
 }
 
 .product__check {
@@ -397,6 +434,7 @@
   flex-direction: column;
   gap: 10px;
   margin-bottom: 24px;
+  font-weight: 500;
 }
 
 .product__process-list li {
@@ -647,6 +685,11 @@
     text-align: left;
   }
 
+  .product__overview-container {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
   .product__overview-panels {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -709,6 +752,11 @@
   .product__image-badge {
     top: 18px;
     left: 18px;
+  }
+
+  .product__overview-container {
+    padding: 18px;
+    border-radius: 20px;
   }
 
   .product__overview-text {

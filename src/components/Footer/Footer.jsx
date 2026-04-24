@@ -50,9 +50,9 @@ export default function Footer() {
             <p className="footer__col-title">Product</p>
             <ul className="footer__col-list">
               <li><a href="#product" onClick={(e) => { e.preventDefault(); handleNavClick('#product'); }}>Protein Bites</a></li>
-              <li><a href="#" onClick={(e) => e.preventDefault()}>Ingredients</a></li>
-              <li><a href="#" onClick={(e) => e.preventDefault()}>Nutrition Info</a></li>
-              <li><a href="#" onClick={(e) => e.preventDefault()}>Where to Buy</a></li>
+              <li><a href="#product" onClick={(e) => e.preventDefault()}>Ingredients</a></li>
+              <li><a href="#prodct" onClick={(e) => e.preventDefault()}>Nutrition Info</a></li>
+              <li><a href="#product" onClick={(e) => e.preventDefault()}>Where to Buy</a></li>
             </ul>
           </div>
 

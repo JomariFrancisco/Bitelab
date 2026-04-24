@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { PRODUCT } from '../../data/mockData.js';
 import './Product.css';
 
 export default function Product() {
   const [activeVariant, setActiveVariant] = useState(0);
   const [activeTab, setActiveTab] = useState('overview');
+
+  const variant = PRODUCT.variants[activeVariant];
 
   const tabs = [
     { id: 'overview', label: 'Overview' },
@@ -28,17 +30,7 @@ export default function Product() {
     },
   ];
 
-  const variant = PRODUCT.variants[activeVariant] || PRODUCT.variants[0];
   const currentImage = productImages[activeVariant] || productImages[0];
-  const autoSlideDelay = 5000;
-
-  useEffect(() => {
-    const intervalId = window.setInterval(() => {
-      setActiveVariant((prev) => (prev + 1) % productImages.length);
-    }, autoSlideDelay);
-
-    return () => window.clearInterval(intervalId);
-  }, [productImages.length]);
 
   const normalizeProductCopy = (value = '') =>
     String(value)
@@ -78,10 +70,6 @@ export default function Product() {
     }
 
     return null;
-  };
-
-  const handleVariantClick = (index) => {
-    setActiveVariant(index);
   };
 
   return (
@@ -125,7 +113,7 @@ export default function Product() {
                     className={`product__variant-btn ${
                       activeVariant === i ? 'product__variant-btn--active' : ''
                     }`}
-                    onClick={() => handleVariantClick(i)}
+                    onClick={() => setActiveVariant(i)}
                   >
                     <span className="product__variant-name">{normalizeProductCopy(v.name)}</span>
                     <span className="product__variant-size">{v.size}</span>
@@ -163,32 +151,34 @@ export default function Product() {
             <div className="product__tab-content">
               {activeTab === 'overview' && (
                 <div className="product__overview">
-                  <p className="product__overview-text">{normalizedOverview}</p>
-                  <p className="product__overview-desc">{normalizedDescription}</p>
+                  <div className="product__overview-container">
+                    <p className="product__overview-text">{normalizedOverview}</p>
+                    <p className="product__overview-desc">{normalizedDescription}</p>
 
-                  <div className="product__overview-panels">
-                    <div className="product__benefits">
-                      <p className="product__benefits-title">Why it&apos;s different</p>
-                      <ul className="product__benefits-list">
-                        {normalizedWhyDifferent.map((b) => (
-                          <li key={b}>
-                            <span className="product__check">✓</span>
-                            {b}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    <div className="product__overview-panels">
+                      <div className="product__benefits">
+                        <p className="product__benefits-title">Why it&apos;s different</p>
+                        <ul className="product__benefits-list">
+                          {normalizedWhyDifferent.map((b) => (
+                            <li key={b}>
+                              <span className="product__check">✓</span>
+                              {b}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
 
-                    <div className="product__process">
-                      <p className="product__benefits-title">How we craft it</p>
-                      <ol className="product__process-list">
-                        {normalizedProcess.map((step, i) => (
-                          <li key={step}>
-                            <span className="product__process-num">{i + 1}</span>
-                            <span>{step}</span>
-                          </li>
-                        ))}
-                      </ol>
+                      <div className="product__process">
+                        <p className="product__benefits-title">How we craft it</p>
+                        <ol className="product__process-list">
+                          {normalizedProcess.map((step, i) => (
+                            <li key={step}>
+                              <span className="product__process-num">{i + 1}</span>
+                              <span>{step}</span>
+                            </li>
+                          ))}
+                        </ol>
+                      </div>
                     </div>
                   </div>
                 </div>
