@@ -358,9 +358,6 @@ export default function Feedback({ user, onLogin }) {
                     Submit Feedback
                   </button>
 
-                  <p className="feedback__demo-note">
-                    Demo only — feedback is saved in your browser&apos;s localStorage.
-                  </p>
                 </form>
               )}
             </div>
