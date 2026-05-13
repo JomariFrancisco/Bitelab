@@ -20,7 +20,7 @@ export const PRODUCT = {
   id: 'bl-pro-001',
   name: 'Banana Oat Bar',
   tagline: 'Nutritious, antioxidant-rich, and sustainably packed for smarter snacking.',
-  price: '₱18',
+  price: '₱25',
   priceNote: 'per bar',
   availability: 'In Stock',
   image: null, // replace with real image path
@@ -65,9 +65,9 @@ export const PRODUCT = {
     'Designed for students and on-the-go lifestyles',
   ],
   variants: [
-    { name: 'Basil Seed Pack', size: 'Single Bar', price: '₱18' },
-    { name: 'Sunflower Seed Pack', size: 'Single Bar', price: '₱18' },
-    { name: 'Mint Seed Pack', size: 'Single Bar', price: '₱18' },
+    { name: 'Basil Seed Pack', size: 'Single Bar', price: '₱25' },
+    { name: 'Sunflower Seed Pack', size: 'Single Bar', price: '₱25' },
+    { name: 'Mint Seed Pack', size: 'Single Bar', price: '₱25' },
   ],
 };
 
